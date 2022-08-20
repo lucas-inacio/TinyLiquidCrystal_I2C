@@ -1,7 +1,7 @@
 {
   "name": "TinyLiquidCrystal_I2C",
   "keywords": "LCD, liquidcrystal, I2C",
-  "description": "A library for DFRobot I2C LCD displays",
+  "description": "LiquidCrystal Arduino library for ATtiny microcontrollers (PCF8574 I2C based displays)",
   "repository":
   {
     "type": "git",
