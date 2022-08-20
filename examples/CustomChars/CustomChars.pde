@@ -2,7 +2,7 @@
 //Compatible with the Arduino IDE 1.0
 //Library version:1.1
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+#include <TinyLiquidCrystal_I2C.h>
 
 #if defined(ARDUINO) && ARDUINO >= 100
 #define printByte(args)  write(args);
