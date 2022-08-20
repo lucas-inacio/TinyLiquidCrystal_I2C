@@ -6,7 +6,7 @@
 
 #include "Arduino.h"
 
-#define printIIC(args)	Wire.write(args)
+#define printIIC(args)	TinyWireM.write(args)
 inline size_t LiquidCrystal_I2C::write(uint8_t value) {
 	send(value, Rs);
 	return 1;
@@ -15,13 +15,13 @@ inline size_t LiquidCrystal_I2C::write(uint8_t value) {
 #else
 #include "WProgram.h"
 
-#define printIIC(args)	Wire.send(args)
+#define printIIC(args)	TinyWireM.send(args)
 inline void LiquidCrystal_I2C::write(uint8_t value) {
 	send(value, Rs);
 }
 
 #endif
-#include "Wire.h"
+#include "TinyWireM.h"
 
 
 
@@ -63,7 +63,7 @@ void LiquidCrystal_I2C::init(){
 
 void LiquidCrystal_I2C::init_priv()
 {
-	Wire.begin();
+	TinyWireM.begin();
 	_displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
 	begin(_cols, _rows);  
 }
@@ -265,9 +265,9 @@ void LiquidCrystal_I2C::write4bits(uint8_t value) {
 }
 
 void LiquidCrystal_I2C::expanderWrite(uint8_t _data){                                        
-	Wire.beginTransmission(_Addr);
+	TinyWireM.beginTransmission(_Addr);
 	printIIC((int)(_data) | _backlightval);
-	Wire.endTransmission();   
+	TinyWireM.endTransmission();   
 }
 
 void LiquidCrystal_I2C::pulseEnable(uint8_t _data){

@@ -1,7 +1,7 @@
 //YWROBOT
 //Compatible with the Arduino IDE 1.0
 //Library version:1.1
-#include <Wire.h>
+#include <TinyWireM.h>
 #include <TinyLiquidCrystal_I2C.h>
 
 #if defined(ARDUINO) && ARDUINO >= 100

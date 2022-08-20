@@ -4,7 +4,7 @@
 
 #include <inttypes.h>
 #include "Print.h" 
-#include <Wire.h>
+#include <TinyWireM.h>
 
 // commands
 #define LCD_CLEARDISPLAY 0x01
