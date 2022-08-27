@@ -2,5 +2,6 @@
 
 LiquidCrystal Arduino library for I2C LCD displays
 
-**Status: Archived** 
-This repository has been transfered to GitLab at https://gitlab.com/tandembyte/LCD_I2C
+## Notes
+
+This library is a modified version of Frank de Brabander's original work. It uses the TinyWireM library for compatibility with ATtiny microcontrollers (bare metal).
